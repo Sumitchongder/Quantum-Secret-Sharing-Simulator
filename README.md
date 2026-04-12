@@ -1,6 +1,5 @@
 # 🔐 Quantum Secret Sharing Simulator
 
-[![CI](https://github.com/Sumitchongder/Quantum-Secret-Sharing-Simulator/actions/workflows/ci.yml/badge.svg)](https://github.com/Sumitchongder/Quantum-Secret-Sharing-Simulator/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sumitchongder-quantum-secret-sharing-simulator.streamlit.app)
@@ -12,25 +11,6 @@
 ## 🚀 Live Demo
 
 **[quantum-sharing-simulator.streamlit.app](https://quantum-sharing-simulator.streamlit.app)**
-
----
-
-## 📖 What This Is
-
-This simulator replicates the full QSS protocol from the seminal paper by Hillery, Bužek, and Berthiaume (1999), extended with the Tittel et al. (2000) optical experiment. It is **protocol-specific** — not a general gate simulator — making it publishable-level work rather than a demo.
-
-### Why it stands out vs CDAC QSim
-
-| Feature | CDAC QSim | This Simulator |
-|---------|-----------|---------------|
-| Protocol specificity | General gates | Full QSS end-to-end |
-| Eavesdropper simulation | ✗ | ✓ QBER detection |
-| Optical experiment replica | ✗ | ✓ Tittel 2000 |
-| N-node generalisation | ✗ | ✓ Up to 8 nodes |
-| Approach comparison | ✗ | ✓ Approach 1 vs 2 |
-| Noise models | Basic | Depolarise + Dephase |
-| Live deployment | ✗ | ✓ Streamlit Cloud |
-| Zenodo DOI | ✗ | ✓ Citable |
 
 ---
 
