@@ -1,0 +1,11 @@
+streamlit>=1.35
+qutip>=4.7.5
+qiskit>=1.1
+qiskit-aer>=0.14
+pennylane>=0.36
+plotly>=5.20
+numpy>=1.26
+scipy>=1.13
+pylatexenc>=2.10
+pytest>=8.0
+ruff>=0.4

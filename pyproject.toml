@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "quantum-secret-sharing-simulator"
+version = "1.0.0"
+description = "Interactive Streamlit dashboard for Quantum Secret Sharing via GHZ states"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Sumit Tapas Chongder", email = "sumit@example.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.35",
+    "qutip>=4.7.5",
+    "qiskit>=1.1",
+    "qiskit-aer>=0.14",
+    "pennylane>=0.36",
+    "plotly>=5.20",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "pylatexenc>=2.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"

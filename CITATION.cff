@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+title: "Quantum Secret Sharing Simulator"
+message: >-
+  If you use this software in your research, please cite it using
+  the metadata from this file.
+type: software
+authors:
+  - family-names: Chongder
+    given-names: Sumit Tapas
+    affiliation: "Indian Institute of Technology Jodhpur"
+    email: sumit@example.com
+version: 1.0.0
+date-released: "2025-01-01"
+repository-code: "https://github.com/Sumitchongder/Quantum-Secret-Sharing-Simulator"
+url: "https://sumitchongder-quantum-secret-sharing-simulator.streamlit.app"
+license: MIT
+keywords:
+  - quantum-computing
+  - quantum-secret-sharing
+  - GHZ-states
+  - quantum-cryptography
+  - quantum-key-distribution
+  - streamlit
+  - qutip
+  - qiskit
+abstract: >-
+  An industry-grade interactive Streamlit dashboard that simulates the full
+  Quantum Secret Sharing (QSS) protocol using GHZ states. Covers the 3-node
+  protocol, N-node generalisation, eavesdropper injection, noise modelling,
+  and optical experiment replication (Tittel et al. 2000).
+references:
+  - type: article
+    authors:
+      - family-names: Hillery
+        given-names: Mark
+      - family-names: Buzek
+        given-names: Vladimir
+      - family-names: Berthiaume
+        given-names: Andre
+    title: "Quantum secret sharing"
+    journal: "Physical Review A"
+    volume: 59
+    year: 1999
+  - type: article
+    authors:
+      - family-names: Tittel
+        given-names: Wolfgang
+    title: "Experimental demonstration of quantum secret sharing"
+    journal: "Physical Review A"
+    volume: 63
+    year: 2001
