@@ -14,6 +14,35 @@
 
 ---
 
+## 🧮 Theory
+
+### GHZ State
+
+$$|GHZ_N\rangle = \frac{1}{\sqrt{2}}\bigl(|00\cdots0\rangle + |11\cdots1\rangle\bigr)$$
+
+### Protocol (3-node case)
+
+1. Nodes A, B, C share a GHZ state
+2. Each picks phase $\phi_i \in \{0, \pi/2\}$
+3. Each applies $P(\phi)|1\rangle = e^{i\phi}|1\rangle$
+4. New state: $|\psi\rangle = \frac{1}{\sqrt{2}}\bigl(|000\rangle + e^{i(\alpha+\beta+\gamma)}|111\rangle\bigr)$
+5. All measure in Pauli-X basis → outcomes $a, b, c \in \{+1, -1\}$
+6. Proceed only if $\alpha + \beta + \gamma \in \{0, \pi\}$
+7. Product: $a \cdot b \cdot c = \cos(\alpha+\beta+\gamma) = \pm 1$
+8. A and B exchange outcomes → infer $c = a \cdot b \cdot d$ where $d = \cos(\alpha+\beta+\gamma)$
+
+### Security
+
+Local outcomes are uniformly random → Eve sees only noise.  
+Intercept-resend attack: QBER $= p_{\text{intercept}}/2$.  
+Detection threshold: QBER $> 5\%$.
+
+### Tittel et al. (2000) Detection Formula
+
+$$P_{ijk} = \frac{1}{8}\bigl[1 + ijk\cos(\alpha+\beta+\gamma)\bigr], \quad i,j,k \in \{+1,-1\}$$
+
+---
+
 ## 🗂️ Repository Structure
 
 ```
@@ -90,35 +119,6 @@ streamlit run app.py
 ```
 
 App opens at `http://localhost:8501`
-
----
-
-## 🧮 Theory
-
-### GHZ State
-
-$$|GHZ_N\rangle = \frac{1}{\sqrt{2}}\bigl(|00\cdots0\rangle + |11\cdots1\rangle\bigr)$$
-
-### Protocol (3-node case)
-
-1. Nodes A, B, C share a GHZ state
-2. Each picks phase $\phi_i \in \{0, \pi/2\}$
-3. Each applies $P(\phi)|1\rangle = e^{i\phi}|1\rangle$
-4. New state: $|\psi\rangle = \frac{1}{\sqrt{2}}\bigl(|000\rangle + e^{i(\alpha+\beta+\gamma)}|111\rangle\bigr)$
-5. All measure in Pauli-X basis → outcomes $a, b, c \in \{+1, -1\}$
-6. Proceed only if $\alpha + \beta + \gamma \in \{0, \pi\}$
-7. Product: $a \cdot b \cdot c = \cos(\alpha+\beta+\gamma) = \pm 1$
-8. A and B exchange outcomes → infer $c = a \cdot b \cdot d$ where $d = \cos(\alpha+\beta+\gamma)$
-
-### Security
-
-Local outcomes are uniformly random → Eve sees only noise.  
-Intercept-resend attack: QBER $= p_{\text{intercept}}/2$.  
-Detection threshold: QBER $> 5\%$.
-
-### Tittel et al. (2000) Detection Formula
-
-$$P_{ijk} = \frac{1}{8}\bigl[1 + ijk\cos(\alpha+\beta+\gamma)\bigr], \quad i,j,k \in \{+1,-1\}$$
 
 ---
 
