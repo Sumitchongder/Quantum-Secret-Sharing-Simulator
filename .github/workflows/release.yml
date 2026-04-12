@@ -1,0 +1,50 @@
+name: Release to Zenodo
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "QSS Simulator ${{ steps.version.outputs.VERSION }}"
+          body: |
+            ## Quantum Secret Sharing Simulator ${{ steps.version.outputs.VERSION }}
+
+            ### What's included
+            - Full QSS protocol simulation (3–8 nodes)
+            - GHZ state generation via QuTiP and Qiskit
+            - Eavesdropper detection and QBER analysis
+            - Tittel et al. (2000) optical experiment replication
+            - Approach 1 vs 2 benchmark
+
+            ### Live demo
+            https://sumitchongder-quantum-secret-sharing-simulator.streamlit.app
+
+            ### Cite this work
+            See `CITATION.cff` for BibTeX and CFF formats.
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify Zenodo (via GitHub–Zenodo webhook)
+        run: |
+          echo "Zenodo DOI will be generated automatically via the GitHub-Zenodo integration."
+          echo "Ensure the repo is connected at https://zenodo.org/account/settings/github/"
+          echo "Tag: ${{ steps.version.outputs.VERSION }}"
