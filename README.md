@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sumitchongder-quantum-secret-sharing-simulator.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://quantum-sharing-simulator.streamlit.app)
 
 > **Interactive simulation of the Quantum Secret Sharing (QSS) protocol using GHZ states** — built with Streamlit, QuTiP, Qiskit, and Plotly. Deployed live. Cite-able via Zenodo DOI.
 
