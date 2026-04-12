@@ -11,7 +11,7 @@
 
 ## 🚀 Live Demo
 
-**[sumitchongder-quantum-secret-sharing-simulator.streamlit.app](https://sumitchongder-quantum-secret-sharing-simulator.streamlit.app)**
+**[sumitchongder-quantum-secret-sharing-simulator.streamlit.app](https://quantum-sharing-simulator.streamlit.app)**
 
 ---
 
