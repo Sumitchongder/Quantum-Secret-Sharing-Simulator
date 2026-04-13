@@ -8,9 +8,25 @@
 
 ---
 
-## 🚀 Live Demo
+## 🌐 Live Dashboard
 
-**[quantum-sharing-simulator.streamlit.app](https://quantum-sharing-simulator.streamlit.app)**
+<div align="center">
+  
+### Try it instantly -> no installation, no login, no API key
+
+<br/>
+  
+<a href="https://quantum-sharing-simulator.streamlit.app/">
+<img src="https://img.shields.io/badge/CLICK%20TO%20OPEN%20LIVE%20DASHBOARD%20%E2%86%97-quantum--secret--sharing--simulator.streamlit.app-6366f1?style=for-the-badge&labelColor=020817" width="80%"/>
+</a>
+
+<br/><br/>
+
+**[`🔗 https://quantum-secret-sharing-simulator.streamlit.app/`](https://quantum-sharing-simulator.streamlit.app/)**
+
+<br/>
+
+</div>
 
 ---
 
